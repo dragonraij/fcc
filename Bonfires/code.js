@@ -18,10 +18,15 @@ function Solution2(){
 	document.getElementById("solution2").innerHTML="Sum of even Fibonacci = "+total;
 }
 
-function Solution1(){
+function Solution5(){
 	var str = prompt("Please enter a sentence", "The quick brown fox jumped over the lazy dog");
-
-  return str.length;
-
-	document.getElementById("solution1").innerHTML="Sum of multiples = "+total;
+	var num = 0;
+	var strArray = str.split(" ");
+	for (pos in strArray){
+		if(strArray[pos].length>num){
+			num=strArray[pos].length;
+		}
+	}
+  alert("The longest word is "+num+" characters long");
+	
 }
