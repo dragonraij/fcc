@@ -44,3 +44,16 @@ for (var i = 0; i < 4; i++) {
 };
   alert(arr);
 }
+
+
+function Solution8(){
+	
+var str = 'Bastian';
+var target =  'n';
+//string lenghts
+var strLen= str.length;
+var targetLen = target.length;
+//compare str substring with target and return boolean result
+var arr = (str.substring(strLen-targetLen)==target);
+  alert(arr);
+}
