@@ -57,3 +57,16 @@ var targetLen = target.length;
 var arr = (str.substring(strLen-targetLen)==target);
   alert(arr);
 }
+
+
+function Solution9(){
+	
+var str = 'Bastian';
+var target =  'n';
+//string lenghts
+var strLen= str.length;
+var targetLen = target.length;
+//compare str substring with target and return boolean result
+var arr = (str.substring(strLen-targetLen)==target);
+  alert(arr);
+}
