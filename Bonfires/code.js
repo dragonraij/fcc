@@ -156,3 +156,11 @@ function truey(value){
 arr= arr.filter(truey);
 alert(arr);
 }
+
+//Where art thou
+function Solution15(){
+var collection =[{ first: 'Romeo', last: 'Montague' }, { first: 'Mercutio', last: null }, { first: 'Tybalt', last: 'Capulet' }];
+var source = { last: 'Capulet' };	
+var arr =[] ;
+alert(arr);
+}
