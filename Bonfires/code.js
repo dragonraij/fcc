@@ -115,3 +115,9 @@ var howMany = 2;
 arr.splice(0,howMany);
 alert(arr);
 }
+
+function Solution13(){
+	
+var arr =['hello', 'hey'] ;
+
+}
