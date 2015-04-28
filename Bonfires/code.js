@@ -119,5 +119,26 @@ alert(arr);
 function Solution13(){
 	
 var arr =['hello', 'hey'] ;
+var word=arr[0];
+var letters = arr[1];
 
+//loop through each of the lettes to find if they are
+// found in the word
+for(var j =0; j<letters.length; j++){
+	if(!contains(word, letters.charAt(j))){
+		alert(false);
+	}
+}
+
+alert(true);
+// find whether letter is in word, return true if found
+function contains(word, letter){
+	flag = false;
+	for(var i =0; i<word.length; i++){
+		if(word.charAt(i)==letter){
+			flag = true;
+		}
+	}
+	return flag;
+}
 }
