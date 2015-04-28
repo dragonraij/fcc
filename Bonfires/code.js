@@ -88,3 +88,28 @@ var finalstr = str.slice(0,num-3)+"...";
 }
 else return str;
 }
+
+function Solution11(){
+	
+var arr =['a', 'b', 'c', 'd'] ;
+var size = 2;
+arrLength = arr.length;
+var result= [];
+var temp = [];
+// loop through array creating temp arrays of size length
+// and put into result array
+for (var i=0; i<arrLength; i++){
+	if((i+1)%size){
+		result.push(temp);
+		temp = arr[i];
+	}	
+	else{
+		temp.push(arr[i]);
+	}
+
+	alert(result);
+};
+
+
+
+}
