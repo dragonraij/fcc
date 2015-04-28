@@ -61,12 +61,30 @@ var arr = (str.substring(strLen-targetLen)==target);
 
 function Solution9(){
 	
-var str = 'Bastian';
-var target =  'n';
-//string lenghts
-var strLen= str.length;
-var targetLen = target.length;
-//compare str substring with target and return boolean result
-var arr = (str.substring(strLen-targetLen)==target);
-  alert(arr);
+var str = 'abc';
+var num =  3;
+var finalstr = "";
+//if num is zero or less the string does not repeat
+//otherwise repeat n number of times
+if(num<=0){
+	return finalstr;
+}
+else{
+	for (var i = 0; i <= num; i++) {
+		finalstr += str; 	
+	};
+}
+  alert(finalstr);
+}
+
+function Solution10(){
+	
+var str = 'A-tisket a-tasket A green and yellow basket';
+var num =  11;
+//use slice to shorten the string to length num
+if(str.length>0){
+var finalstr = str.slice(0,num-3)+"...";
+  alert(finalstr);
+}
+else return str;
 }
