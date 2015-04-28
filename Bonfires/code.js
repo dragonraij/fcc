@@ -147,6 +147,12 @@ function contains(word, letter){
 function Solution14(){
 	
 var arr =[7, 'ate', '', false, 9] ;
+//used as callback function for filter.
+//just returns the value, falsey values get filtered out
+function truey(value){
+	return value;
+}
 
+arr= arr.filter(truey);
 alert(arr);
 }
