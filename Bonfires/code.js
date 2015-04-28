@@ -142,3 +142,11 @@ function contains(word, letter){
 	return flag;
 }
 }
+
+
+function Solution14(){
+	
+var arr =[7, 'ate', '', false, 9] ;
+
+alert(arr);
+}
