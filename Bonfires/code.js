@@ -106,3 +106,12 @@ alert(result);
 
 
 }
+
+function Solution12(){
+	
+var arr =[1, 2, 3] ;
+var howMany = 2;
+
+
+
+}
