@@ -98,17 +98,10 @@ var result= [];
 var temp = [];
 // loop through array creating temp arrays of size length
 // and put into result array
-for (var i=0; i<arrLength; i++){
-	if((i+1)%size){
-		result.push(temp);
-		temp = arr[i];
-	}	
-	else{
-		temp.push(arr[i]);
-	}
-
-	alert(result);
-};
+while(arr.length){
+	result.push(arr.splice(0,size));
+}
+alert(result);
 
 
 
