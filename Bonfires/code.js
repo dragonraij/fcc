@@ -172,3 +172,12 @@ console.log(arr);
 }
 alert(arr);
 }
+
+
+//Seek and Destroy
+function Solution16(){
+	
+var arr =[1, 2, 3, 1, 2, 3] ;
+
+alert(arr);
+}
