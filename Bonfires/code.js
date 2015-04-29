@@ -162,5 +162,13 @@ function Solution15(){
 var collection =[{ first: 'Romeo', last: 'Montague' }, { first: 'Mercutio', last: null }, { first: 'Tybalt', last: 'Capulet' }];
 var source = { last: 'Capulet' };	
 var arr =[] ;
+var sourceProp= Object.getOwnPropertyNames(source);
+var temp = source.last;
+for(var i=0; i<collection.length; i++){
+	if(source[sourceProp]== collection[i][sourceProp[0]]){
+		arr.push(collection[i]);
+	}
+console.log(arr);
+}
 alert(arr);
 }
