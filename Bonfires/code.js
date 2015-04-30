@@ -176,8 +176,14 @@ alert(arr);
 
 //Seek and Destroy
 function Solution16(){
-	
+var arg=[2,3];
 var arr =[1, 2, 3, 1, 2, 3] ;
+for(var i=0;i<arg.length;i++){
+	arr= arr.filter(toRemove);
+}
 
+function toRemove(value){
+	return value !=arg[i];
+}
 alert(arr);
 }
