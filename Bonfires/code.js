@@ -176,14 +176,20 @@ alert(arr);
 
 //Seek and Destroy
 function Solution16(){
-var arg=[2,3];
-var arr =[1, 2, 3, 1, 2, 3] ;
-for(var i=0;i<arg.length;i++){
-	arr= arr.filter(toRemove);
+//to test method using, array and two other arguments
+testFun([1, 2, 3, 1, 2, 3], 2, 3)
+function testFun(arr){
+//first argument is array, go through the rest of arguments and use it to filter array
+for(var i=1;i<arguments.length;i++){
+	//current variable used to filter array.
+	//items that match tocheck are removed
+	var toCheck = arguments[i];
+	arr= arr.filter(
+		function(value){
+			return (value!=toCheck);
+		}
+	);
+	}
+alert("Final array is " +arr);
 }
-
-function toRemove(value){
-	return value !=arg[i];
-}
-alert(arr);
 }
