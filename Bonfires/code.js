@@ -195,11 +195,15 @@ alert("Final array is " +arr);
 }
 
 //Where do I belong
-function Solution16(){
+function Solution17(){
 //first argument is array of sorted values, second value used is whose position being looked up
 testFun([40, 60], 50)
-function testFun(arr){
+function testFun(arr, num){
+var testArray=arguments[0];
+for(var i=0;i<testArray.length;i++){
+	if(testArray[i]>=num){alert("Position of number is  " +i);return;}
+}
+alert("Position of number is  " +testArray.length);
 
-alert("Position of number is  " +arr);
 }
 }
