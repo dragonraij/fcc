@@ -193,3 +193,13 @@ for(var i=1;i<arguments.length;i++){
 alert("Final array is " +arr);
 }
 }
+
+//Where do I belong
+function Solution16(){
+//first argument is array of sorted values, second value used is whose position being looked up
+testFun([40, 60], 50)
+function testFun(arr){
+
+alert("Position of number is  " +arr);
+}
+}
