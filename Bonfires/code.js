@@ -235,6 +235,24 @@ function Solution19(){
 function diff(arr1, arr2) {
   var newArr = [];
   // Same, same; but different.
+  arr2.forEach(compareArr1);
+  arr1.forEach(compareArr2);
+
+  function compareArr1(element, index, array){
+  	if (-1 === arr1.indexOf(element)) {
+    newArr.push(element);
+    console.log(newArr);
+  }
+  }
+
+
+function compareArr2(element, index, array){
+  	if (-1 === arr2.indexOf(element)) {
+    newArr.push(element);
+    console.log(newArr);
+  }
+  }
+
   return newArr;
 }
 
