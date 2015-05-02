@@ -214,11 +214,12 @@ function Solution18(){
 sumAll([1, 4]);
 
 function sumAll(arr) {
-  
+//find the larger and smaller number  
 var min = Math.min.apply(null, arr);
 var max = Math.max.apply(null, arr);
 var sum = 0;
 
+//loop through and all all the numbers between the min and max
 for (var i = min; i<=max; i++){
 	sum +=i;
 }
@@ -227,3 +228,15 @@ for (var i = min; i<=max; i++){
 }
 }
 
+
+// Sum a range
+function Solution19(){
+
+function diff(arr1, arr2) {
+  var newArr = [];
+  // Same, same; but different.
+  return newArr;
+}
+
+diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+}
