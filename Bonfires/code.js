@@ -306,12 +306,17 @@ convert(4);
 
 
 // Search and replace
-function Solution18(){
+function Solution21(){
 
 function replace(str, before, after) {
- return str;
+ var firstLetter = before.charAt(0);
+ if(firstLetter==firstLetter.toUpperCase()){
+ 	after=after.charAt(0).toUpperCase()+after.slice(1);
+ }
+ 
+ return str.replace(before, after);
 }
 
-replace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+replace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
 
 }
