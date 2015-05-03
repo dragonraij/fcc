@@ -324,12 +324,24 @@ replace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
 // Pig Latin Translator
 function Solution22(){
 function translate(str) {
-//If the first letter is a vowel add way to the end of string
-	if(['a','e','i','o','u'].indexOf(str.charAt(0).toLowerCase())){
-
+	//If the first letter is a vowel add 'way' to the end of string
+	if(['a','e','i','o','u'].indexOf(str.charAt(0).toLowerCase())>-1){
+		str+='way';
 	}
+	//Otherwise it is consonant - move initial consonants to the end of the word and add ay
+	else{
+		//find size of initial consonant group
+		var j=0;
+		do{
+			j++;
+		}while(['a','e','i','o','u'].indexOf(str.charAt(j).toLowerCase())==-1);
+		//move first consonant group to end of string and add 'ay'
+		var firstLetters = str.slice(0,j).toLowerCase();
+		str= str.slice(j)+firstLetters+'ay';
+	}
+	console.log(str);
  return str;
 }
 
-translate("consonant");
+translate("glove");
 }
