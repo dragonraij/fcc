@@ -320,3 +320,16 @@ function replace(str, before, after) {
 replace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped");
 
 }
+
+// Pig Latin Translator
+function Solution22(){
+function translate(str) {
+//If the first letter is a vowel add way to the end of string
+	if(['a','e','i','o','u'].indexOf(str.charAt(0).toLowerCase())){
+
+	}
+ return str;
+}
+
+translate("consonant");
+}
