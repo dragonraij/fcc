@@ -229,7 +229,7 @@ for (var i = min; i<=max; i++){
 }
 
 
-// Sum a range
+// Diff of array
 function Solution19(){
 
 function diff(arr1, arr2) {
@@ -258,3 +258,53 @@ function compareArr2(element, index, array){
 
 diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 }
+
+function Solution20(){
+function convert(num) {
+ var roman ="";
+ var noOfMultiples=0;
+ //map of roman numberals
+ var numerals = [[1000,"M"],[500,"D"],[100,"C"],[50,"L"], [10,"X"], [5,"V"],[1,"I"]];
+
+//Compare number with roman numerals
+for(var i = 0; i<numerals.length; i++){
+
+	makeRoman(numerals[i][0], numerals[i][1]);
+}
+	console.log(roman);
+ return roman;
+
+function makeRoman(divisor,RomNumber){
+noOfMultiples = Math.floor(num/divisor);
+if(noOfMultiples){
+	//if having four consective same numerals use subtractive notation
+	if(noOfMultiples==4){
+		if(roman.charAt(roman.length-1)==numerals[i-2][1]){
+			roman+=RomNumber+numerals[i-1][1];
+		}else if(roman.charAt(roman.length-1)==numerals[i-1][1]){
+			roman=roman.slice(0,roman.length-1);
+			roman+= RomNumber+ numerals[i-2][1];
+			
+		}else if(roman==""){
+			roman+=RomNumber+numerals[i-1][1];
+		}
+		
+	}
+	else{
+		for(var j=0; j<noOfMultiples; j++){
+			roman+=RomNumber;
+		}
+	}
+	num-=(noOfMultiples*divisor);
+}
+
+ 
+}
+}
+convert(4);
+}
+
+
+// divide 
+// remainder u multiply value
+// subt divisor
