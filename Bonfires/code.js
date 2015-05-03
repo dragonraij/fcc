@@ -305,6 +305,13 @@ convert(4);
 }
 
 
-// divide 
-// remainder u multiply value
-// subt divisor
+// Search and replace
+function Solution18(){
+
+function replace(str, before, after) {
+ return str;
+}
+
+replace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+
+}
