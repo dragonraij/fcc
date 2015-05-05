@@ -345,3 +345,13 @@ function translate(str) {
 
 translate("glove");
 }
+
+// DNA Pairing
+function Solution21(){
+
+function pair(str) {
+ return str;
+}
+
+pair("GCG");
+}
