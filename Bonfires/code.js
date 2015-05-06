@@ -372,3 +372,14 @@ function pair(str) {
 
 pair("GCG");
 }
+
+
+// Missing Letters
+//loop through all the provided letters and finds the equivalent pairs
+function Solution24(){
+function fearNotLetter(str) {
+  return str;
+}
+
+fearNotLetter('abce');
+}
