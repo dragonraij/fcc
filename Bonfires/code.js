@@ -347,6 +347,7 @@ translate("glove");
 }
 
 // DNA Pairing
+//loop through all the provided letters and finds the equivalent pairs
 function Solution23(){
 
 function pair(str) {
@@ -354,12 +355,16 @@ function pair(str) {
 	for (var i=0; i <str.length; i++){
 		DNApairs.push(makePairs(str.charAt(i)));
 	}
+	alert(DNApairs);
  return str;
-
+//Provided with one of the DNA codes, returns the pair as array
  function makePairs(value){
  	switch(value){
- 		case 'G': return []
-
+ 		case 'A': return ['A','T'];
+ 		case 'T': return ['T','A'];
+ 		case 'G': return ['G','C'];
+ 		case 'C': return ['C','G'];
+ 		default: return [-1,-1];
  	}
 
  }
