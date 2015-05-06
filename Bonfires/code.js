@@ -347,10 +347,22 @@ translate("glove");
 }
 
 // DNA Pairing
-function Solution21(){
+function Solution23(){
 
 function pair(str) {
+	var DNApairs = [];
+	for (var i=0; i <str.length; i++){
+		DNApairs.push(makePairs(str.charAt(i)));
+	}
  return str;
+
+ function makePairs(value){
+ 	switch(value){
+ 		case 'G': return []
+
+ 	}
+
+ }
 }
 
 pair("GCG");
