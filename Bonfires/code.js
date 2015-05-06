@@ -407,3 +407,14 @@ function boo(bool) {
 }
 	boo(null);
 }
+
+// Sorted Union
+//check the type of the parameter, if boolean return true else false
+function Solution26(){
+function unite(arr1, arr2, arr3) {
+  return arr1;
+}
+
+unite([1, 2, 3], [5, 2, 1, 4], [2, 1]);
+
+}
