@@ -409,10 +409,24 @@ function boo(bool) {
 }
 
 // Sorted Union
-//check the type of the parameter, if boolean return true else false
+//returns list of all unique values in parameter arrays
 function Solution26(){
 function unite(arr1, arr2, arr3) {
-  return arr1;
+  var combinedArray = [];
+  var current =[];
+  //loop through list of parameters
+  for(i=0; i<arguments.length; i++){
+  	current=arguments[i];
+  	//for each parameter go through array checking if value is in combinedArray
+  	//if not found add it to the array
+  	for(j=0;j<current.length; j++){
+  		if(combinedArray.indexOf(current[j])==-1){
+  			combinedArray.push(current[j]);
+  		}
+  	}
+  }
+
+  return combinedArray;
 }
 
 unite([1, 2, 3], [5, 2, 1, 4], [2, 1]);
