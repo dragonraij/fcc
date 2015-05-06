@@ -375,10 +375,20 @@ pair("GCG");
 
 
 // Missing Letters
-//loop through all the provided letters and finds the equivalent pairs
+//loop through all the provided letters and check if next letter is one greater
+//than current. if not add missing letter to missingLetters string
+//at the end if no missing letters found return undefined else return missingLetters string
 function Solution24(){
 function fearNotLetter(str) {
-  return str;
+	var missingLetters="";
+	for(var i=0; i<str.length-1;i++){
+		if(str.charCodeAt(i+1)-str.charCodeAt(i)!=1){
+			missingLetters+=String.fromCharCode(str.charCodeAt(i)+1);
+		}
+	}
+	console.log(missingLetters);
+	if(missingLetters){return missingLetters;}
+	else {return undefined}
 }
 
 fearNotLetter('abce');
