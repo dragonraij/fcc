@@ -393,3 +393,13 @@ function fearNotLetter(str) {
 
 fearNotLetter('abce');
 }
+
+// Missing Letters
+//loop through all the provided letters and check if next letter is one greater
+//than current. if not add missing letter to missingLetters string
+//at the end if no missing letters found return undefined else return missingLetters string
+function Solution25(){
+function boo(bool) {
+  // What is the new fad diet for ghost developers? The Boolean.
+  return bool;
+}
