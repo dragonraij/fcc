@@ -452,10 +452,15 @@ function Solution28(){
 function spinalCase(str) {
   // "It's such a fine line between stupid, and clever."
   // --David St. Hubbins
+  	//replace camelCase with spinal
+  	str=str.replace(/([a-z])([A-Z])/g, '$1-$2');
+  	//replace normal word spacing with spinal
     str =str.replace(/\s/g, "-" );
+  	//replace underscores with spinal
   	str =str.replace(/_/g, "-" ).toLowerCase();
-  return str;
+
+  console.log(str);
 }
 
-spinalCase('This Is Spinal Tap');
+spinalCase('ThisIsSpinalTapTheTeletubbies say Eh-ohThis Is Spinal Tap');
 }
