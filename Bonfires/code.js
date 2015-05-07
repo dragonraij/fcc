@@ -432,3 +432,30 @@ function unite(arr1, arr2, arr3) {
 unite([1, 2, 3], [5, 2, 1, 4], [2, 1]);
 
 }
+
+
+// Convert HTML Entities
+//returns list of all unique values in parameter arrays
+function Solution27(){
+function convert(str) {
+  // &colon;&rpar;
+  str =str.replace(/&/g, "&#38" );
+  console.log(str);
+}
+
+convert('Dolce & Gabbana');
+}
+
+// Convert to spinal case
+//use REGEX to convert string to spinal case
+function Solution28(){
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+    str =str.replace(/\s/g, "-" );
+  	str =str.replace(/_/g, "-" ).toLowerCase();
+  return str;
+}
+
+spinalCase('This Is Spinal Tap');
+}
