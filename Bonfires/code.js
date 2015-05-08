@@ -464,3 +464,14 @@ function spinalCase(str) {
 
 spinalCase('ThisIsSpinalTapTheTeletubbies say Eh-ohThis Is Spinal Tap');
 }
+
+
+// Sum Fibonaci numbers
+
+function Solution29(){
+function sumFibs(num) {
+  return num;
+}
+
+sumFibs(4);
+}
