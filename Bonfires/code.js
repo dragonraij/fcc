@@ -470,6 +470,9 @@ spinalCase('ThisIsSpinalTapTheTeletubbies say Eh-ohThis Is Spinal Tap');
 
 function Solution29(){
 function sumFibs(num) {
+  for(var i=0; i<4; i++){
+  	
+  }
   return num;
 }
 
