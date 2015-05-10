@@ -492,14 +492,23 @@ sumFibs(4);
 }
 
 
-// Sum Ptimes
+// Sum All Ptimes
 
 function Solution30(){
 	function sumPrimes(num) {
-  var primesList = [];
+  var primesList = [2];
+
+  for(var i =0; i<=num; i++){
+  	if(sumFibs){}
+  }
 
   return num;
 }
-
+function isPrime(n){
+	var flag = true;
+	while(flag){
+		
+	}
+}
 sumPrimes(10);
 }
