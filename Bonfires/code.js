@@ -466,14 +466,26 @@ spinalCase('ThisIsSpinalTapTheTeletubbies say Eh-ohThis Is Spinal Tap');
 }
 
 
-// Sum Fibonaci numbers
+// Sum Odd Fibonaci numbers
 
 function Solution29(){
 function sumFibs(num) {
-  for(var i=0; i<4; i++){
-  	
-  }
-  return num;
+	var previous = 0; //previous Fibonachi number
+	var Fibonaci =1;// current Fibonanci
+	var totalOfOdd = 0; // sum of odd Fibonachi numbers
+	var temp = 0;
+	do{
+		//If current Fibonachi is odd add to total
+		if(Fibonaci%2){
+			totalOfOdd+=Fibonaci;
+		}
+		//Add current plus previous Fibonachi
+		temp=previous+Fibonaci;
+		previous=Fibonaci;
+		Fibonaci=temp;
+	}while(Fibonaci<=num)
+  console.log(totalOfOdd);
+  return totalOfOdd;
 }
 
 sumFibs(4);
