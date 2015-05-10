@@ -481,7 +481,7 @@ function sumFibs(num) {
 		}
 		//Add current plus previous Fibonachi
 		temp=previous+Fibonaci;
-		previous=Fibonaci;
+		previous=Fibonaci; // swap number positions
 		Fibonaci=temp;
 	}while(Fibonaci<=num)
   console.log(totalOfOdd);
@@ -489,4 +489,17 @@ function sumFibs(num) {
 }
 
 sumFibs(4);
+}
+
+
+// Sum Ptimes
+
+function Solution30(){
+	function sumPrimes(num) {
+  var primesList = [];
+
+  return num;
+}
+
+sumPrimes(10);
 }
