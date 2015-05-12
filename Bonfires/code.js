@@ -527,11 +527,22 @@ sumPrimes(10);
 }
 
 
-// Sum All Primes
-//given a number num add all prime numbers up to and including num
+// Lowest common multiple
+//given an array indicating a range find lowest common multiple
 function Solution31(){
 	function smallestCommons(arr) {
-	return arr;
+	var max = Math.max.apply(Math, arr);
+	var min = Math.min.apply(Math, arr);
+	var multiple = max*(max-1);
+	var LCM = 0;
+	
+	for(var i=min; i<=max; i++){
+		if(isPrime(i)){
+			LCM*=i;
+		}
+	}
+	return LCM;
+
 }
 
 
