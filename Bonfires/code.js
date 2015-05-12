@@ -556,3 +556,12 @@ function Solution31(){
 
 smallestCommons([1,5]);
 }
+
+//Finders Keepers
+function Solution31(){
+	var num = 0;
+  return num;
+}
+
+find([1, 2, 3, 4], function(num){ return num % 2 === 0; });
+}
