@@ -531,16 +531,24 @@ sumPrimes(10);
 //given an array indicating a range find lowest common multiple
 function Solution31(){
 	function smallestCommons(arr) {
-	var max = Math.max.apply(Math, arr);
-	var min = Math.min.apply(Math, arr);
-	var multiple = max*(max-1);
-	var LCM = 0;
+	var max = Math.max.apply(Math, arr);  //maximum number of range
+	var min = Math.min.apply(Math, arr);  // minimum number of range
+	var multiple = max*(max-1); //the amount by which potential LCM increments
+	var LCM = multiple; //potential LCM value
+	var LCMFound;
 	
-	for(var i=min; i<=max; i++){
-		if(isPrime(i)){
-			LCM*=i;
+	do{
+		LCMFound=true// set flag to true
+		//check if the LCM is divisible by all the numbers in range
+		for(var i=min; i<=max-2; i++){
+			if(LCM%i){
+				LCM+=multiple;
+				LCMFound =false; // if LCM is not divisible it is not a LCM
+			}
 		}
-	}
+				
+	}while(!LCMFound) // repeat until LCM is found
+	
 	return LCM;
 
 }
