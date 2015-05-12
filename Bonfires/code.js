@@ -496,19 +496,32 @@ sumFibs(4);
 
 function Solution30(){
 	function sumPrimes(num) {
-  var primesList = [2];
+  var primesList = [2], total = 2;//initialise to first prime
+  if(num<2){return -1}//numbers less than 2 are not prime
+  for(var i =3; i<=num; i++){
+  	if(isPrime(i)){
+  		total+=i;
+  		primesList.push(i);
 
-  for(var i =0; i<=num; i++){
-  	if(sumFibs){}
+  	}
   }
+  console.log(total);
+  return total;
 
-  return num;
-}
+//loop through list of known primes to test if number is divisible
+//returns boolean true if it is a prime
 function isPrime(n){
 	var flag = true;
-	while(flag){
-		
-	}
+	for(number in primesList){
+		if(n%primesList[number]==0){
+			flag=false; //if n is divisible by number its not prime
+		}
+	}	
+	
+	return flag;
 }
+}
+
+
 sumPrimes(10);
 }
