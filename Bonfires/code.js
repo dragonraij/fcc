@@ -492,8 +492,8 @@ sumFibs(4);
 }
 
 
-// Sum All Ptimes
-
+// Sum All Primes
+//given a number num add all prime numbers up to and including num
 function Solution30(){
 	function sumPrimes(num) {
   var primesList = [2], total = 2;//initialise to first prime
@@ -524,4 +524,16 @@ function isPrime(n){
 
 
 sumPrimes(10);
+}
+
+
+// Sum All Primes
+//given a number num add all prime numbers up to and including num
+function Solution31(){
+	function smallestCommons(arr) {
+	return arr;
+}
+
+
+smallestCommons([1,5]);
 }
