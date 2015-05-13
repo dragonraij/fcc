@@ -558,10 +558,31 @@ smallestCommons([1,5]);
 }
 
 //Finders Keepers
-function Solution31(){
-	var num = 0;
-  return num;
+function Solution32(){
+function find(arr, func){
+	var match;
+	arr.some(func);
+	console.log(match);
+	return match;
 }
 
-find([1, 2, 3, 4], function(num){ return num % 2 === 0; });
+function underTen(arr, func){
+	var match;
+	match=arr.some(func);
+	console.log(match);
+	return match;
+}
+
+underTen([13,34,6,67,45], function(num){return num<10;});
+// find([1, 2, 3, 4], function(num){ 
+// 	if(num % 2 === 0){
+// 		match=num;
+// 		console.log(match);
+// 		return true;
+// 	}
+// 	else{
+// 		return false;
+// 		}
+// })
+
 }
