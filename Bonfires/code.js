@@ -586,6 +586,20 @@ find([1, 2, 3, 4], function(num){
 function Solution33(){
 function drop(arr, func) {
   // Drop them elements.
+  var number;
+  var length = arr.length;
+  for(var i =0; i<length; i++){
+  	
+  	if(func(arr[0])){
+  		break;
+  	}
+  	else{
+  		number=arr.shift();
+  		console.log(number);
+  		length-=1;	
+  	}
+  }
+  console.log(arr);
   return arr;
 }
 
