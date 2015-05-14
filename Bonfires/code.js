@@ -614,22 +614,21 @@ drop([1, 2, 3], function(n) {return n < 3; });
 
 
 //Steamroller
+//uses recursive function calls to change multi layered array to flat array
 function Solution34(){
 	function steamroller(arr) {
   // I'm a steamroller, baby
-  var flatArray = [];
+  var flatArray = [];//flattend array goes here
 
-console.log(arr);
-flatten(arr);
+flatten(arr); //calls the flatten method on input array
+
   function flatten(arr){
   	for(var i =0; i<arr.length; i++){
-  		if(Array.isArray(arr[i])){
+  		if(Array.isArray(arr[i])){	//if element at position i is an array, call flatten it
   			flatten(arr[i]);
-  			console.log(true);
   		}
   		else{
-  			flatArray.push(arr[i]);
-  			console.log(false);
+  			flatArray.push(arr[i]);	//otherwise put the value of element i to output array
   		}
   	}
 
