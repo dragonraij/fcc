@@ -572,14 +572,6 @@ function find(arr, func){
 	return match;
 }
 
-function underTen(arr, func){
-	var match;
-	var found =arr.some(func);
-	console.log(match);
-	return match;
-}
-
-//underTen([13,34,6,67,45], function(num){return num<10;});
 find([1, 2, 3, 4], function(num){ 
 	if(num % 2 === 0){
 		match=num;
@@ -589,3 +581,14 @@ find([1, 2, 3, 4], function(num){
 });
 
 }
+
+//Finders Keepers
+function Solution33(){
+function drop(arr, func) {
+  // Drop them elements.
+  return arr;
+}
+
+drop([1, 2, 3], function(n) {return n < 3; });
+}
+
