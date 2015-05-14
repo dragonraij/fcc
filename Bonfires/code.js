@@ -617,7 +617,25 @@ drop([1, 2, 3], function(n) {return n < 3; });
 function Solution34(){
 	function steamroller(arr) {
   // I'm a steamroller, baby
-  return arr;
+  var flatArray = [];
+
+console.log(arr);
+flatten(arr);
+  function flatten(arr){
+  	for(var i =0; i<arr.length; i++){
+  		if(Array.isArray(arr[i])){
+  			flatten(arr[i]);
+  			console.log(true);
+  		}
+  		else{
+  			flatArray.push(arr[i]);
+  			console.log(false);
+  		}
+  	}
+
+  }
+  console.log(flatArray);
+  return flatArray;
 }
 
 steamroller([1, [2], [3, [[4]]]]);
