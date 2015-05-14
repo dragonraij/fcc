@@ -582,7 +582,7 @@ find([1, 2, 3, 4], function(num){
 
 }
 
-//Finders Keepers
+//Drop it like its hot
 function Solution33(){
 function drop(arr, func) {
   // Drop them elements.
@@ -610,5 +610,16 @@ function drop(arr, func) {
 }
 
 drop([1, 2, 3], function(n) {return n < 3; });
+}
+
+
+//Steamroller
+function Solution34(){
+	function steamroller(arr) {
+  // I'm a steamroller, baby
+  return arr;
+}
+
+steamroller([1, [2], [3, [[4]]]]);
 }
 
