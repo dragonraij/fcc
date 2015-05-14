@@ -640,3 +640,9 @@ flatten(arr); //calls the flatten method on input array
 steamroller([1, [2], [3, [[4]]]]);
 }
 
+
+//Binary Agents
+function Solution34(){
+
+}
+
