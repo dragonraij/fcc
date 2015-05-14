@@ -561,28 +561,31 @@ smallestCommons([1,5]);
 function Solution32(){
 function find(arr, func){
 	var match;
-	arr.some(func);
+	arr.some(function(num){ 
+	if(num % 2 === 0){
+		match=num;
+		console.log(match);
+		return true;
+	}
+});
 	console.log(match);
 	return match;
 }
 
 function underTen(arr, func){
 	var match;
-	match=arr.some(func);
+	var found =arr.some(func);
 	console.log(match);
 	return match;
 }
 
-underTen([13,34,6,67,45], function(num){return num<10;});
-// find([1, 2, 3, 4], function(num){ 
-// 	if(num % 2 === 0){
-// 		match=num;
-// 		console.log(match);
-// 		return true;
-// 	}
-// 	else{
-// 		return false;
-// 		}
-// })
+//underTen([13,34,6,67,45], function(num){return num<10;});
+find([1, 2, 3, 4], function(num){ 
+	if(num % 2 === 0){
+		match=num;
+		console.log(match);
+		return true;
+	}
+});
 
 }
