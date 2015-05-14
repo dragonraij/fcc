@@ -586,18 +586,24 @@ find([1, 2, 3, 4], function(num){
 function Solution33(){
 function drop(arr, func) {
   // Drop them elements.
-  var number;
+  var count=0;
   var length = arr.length;
+  
+  //loop through the array counting number of items that need to be removed
+  //until you get to the first element that passes the truth test
   for(var i =0; i<length; i++){
   	
-  	if(func(arr[0])){
+  	if(func(arr[i])){//test for i
   		break;
   	}
   	else{
-  		number=arr.shift();
-  		console.log(number);
-  		length-=1;	
+  		count++;//increment count
   	}
+  }
+
+  //remove count number of elements from the front of the array
+  for(var j=0; j<count; j++){
+  	arr.shift();
   }
   console.log(arr);
   return arr;
