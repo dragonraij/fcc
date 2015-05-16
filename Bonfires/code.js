@@ -642,10 +642,19 @@ steamroller([1, [2], [3, [[4]]]]);
 
 
 //Binary Agents
-function Solution34(){
+function Solution35(){
 function binaryAgent(str) {
-	var strArray = str.split(" ");
-  return str;
+	var word = ""; // create empty word
+	var strArray = str.split(" ");// split str to array of binary numbers
+	
+	//loop through the numbers in strArray
+	for (var i = 0; i < strArray.length; i++) {
+		strArray[i]= parseInt(strArray[i], 2); // convert the binary values to base 10
+		word = word+String.fromCharCode(strArray[i]); // convert charactercode to string
+	};
+
+
+  return word; //return the converted word
 }
 
 binaryAgent('01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111');
