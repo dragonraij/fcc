@@ -657,16 +657,43 @@ function binaryAgent(str) {
   return word; //return the converted word
 }
 
-binaryAgent('01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 
-	01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 
-	00100001 00111111');
+binaryAgent('01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111');
 }
 
 
 //Pair Wise
+//Find pairs of number in array which add up to arg
 function Solution36(){
+
 function pairwise(arr, arg) {
-	return arg;
+	var indexValues = [];
+	var total =0;
+
+	//loop through the array comparing pairs of values
+	for (var j = 0; j < arr.length-1; j++) {
+		for (var i = j+1; i < arr.length; i++) {
+
+			//if the index value has already been summed, dont sum again
+			if(indexValues.indexOf(i)>=0||indexValues.indexOf(j)>=0){
+				continue;}
+			
+			//if current values add up to arg, add them to array
+			if(arr[i]+arr[j]==arg){
+				indexValues.push(i);
+				indexValues.push(j);
+				console.log(arr[j]+"+"+arr[i]+"="+arg);
+				console.log(indexValues.indexOf(i));
+			console.log(indexValues.indexOf(j));
+			}
+		};
+	};	
+
+	//sum up the index values and return
+	for (var i = 0; i < indexValues.length; i++) {
+		total+=indexValues[i]
+	};
+	console.log(total);
+	return total;
 }
 
 pairwise([1,4,2,3,0,5], 7);
