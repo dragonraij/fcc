@@ -705,6 +705,23 @@ pairwise([1,4,2,3,0,5], 7);
 //checks if the second argument is found as an element in 
 //the first element
 function Solution37(){
+function every(collection, pre) {
+  // Does everyone have one of these?
 
+  //loop through all the objects in the array
+  for (var i = 0; i < collection.length; i++) {
+
+  	//check to see if object has property pre and it is defined
+  	if(collection[i].hasOwnProperty(pre) && collection[i][pre] ){
+  		
+  		//property exists and is defined
+  		
+  	}
+  	else {return false;} //otherwise return false
+  };
+  return true;
+}
+
+every([{'user': 'Tinky-Winky', 'sex': 'male'}, {'user': 'Dipsy', 'sex': 'male'}, {'user': 'Laa-Laa', 'sex': 'female'}, {'user': 'Po', 'sex': 'female'}], 'sex');
 }
 
