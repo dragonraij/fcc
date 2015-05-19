@@ -699,3 +699,12 @@ function pairwise(arr, arg) {
 pairwise([1,4,2,3,0,5], 7);
 }
 
+
+
+//Everything be true
+//checks if the second argument is found as an element in 
+//the first element
+function Solution37(){
+
+}
+
