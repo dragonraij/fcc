@@ -725,3 +725,14 @@ function every(collection, pre) {
 every([{'user': 'Tinky-Winky', 'sex': 'male'}, {'user': 'Dipsy', 'sex': 'male'}, {'user': 'Laa-Laa', 'sex': 'female'}, {'user': 'Po', 'sex': 'female'}], 'sex');
 }
 
+
+//Arguments optional
+//Implement a add function. IF two number are given add them together
+//If only one argument is provided return a function expecting another number to add
+function Solution38(){
+function add() {
+  return false;
+}
+
+add(2,3);
+}
