@@ -731,6 +731,12 @@ every([{'user': 'Tinky-Winky', 'sex': 'male'}, {'user': 'Dipsy', 'sex': 'male'},
 //If only one argument is provided return a function expecting another number to add
 function Solution38(){
 function add() {
+	if(arguments.length==2){
+		return arguments[0]+arguments[1];
+	}
+	else{
+
+		}
   return false;
 }
 
