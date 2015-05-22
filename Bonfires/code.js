@@ -731,14 +731,34 @@ every([{'user': 'Tinky-Winky', 'sex': 'male'}, {'user': 'Dipsy', 'sex': 'male'},
 //If only one argument is provided return a function expecting another number to add
 function Solution38(){
 function add() {
-	if(arguments.length==2){
-		return arguments[0]+arguments[1];
+	var num= arguments[0];// set num as first parameter for easy referance
+	
+	//If two parameters are passed and both are numbers
+	if(arguments.length==2 && parseFloat(num)===num && parseFloat(arguments[1])===arguments[1]){
+		return num+arguments[1];
 	}
-	else{
 
-		}
-  return false;
+	//Only one parameter given and is a number
+	else if(arguments.length==1 && !isNaN(num)){
+
+		//return a function function expects another number to add to n
+		// returns sum, if number not found returns undefined
+		return function (n){
+			if(n===parseFloat(n)){
+				console.log(n+num);
+				return n+num;
+			}else{
+				console.log(undefined);
+				return undefined;
+			}
+		};
+			
+	}
+
+	//If correct parameters not found, return undefined
+  		console.log(undefined+"end");
+  return undefined;
 }
 
-add(2,3);
+add(2, 3);
 }
