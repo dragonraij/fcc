@@ -762,3 +762,9 @@ function add() {
 
 add(2, 3);
 }
+
+
+//Arguments optional
+function Solution39(){
+
+}
