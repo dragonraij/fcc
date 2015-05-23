@@ -764,7 +764,8 @@ add(2, 3);
 }
 
 
-//Arguments optional
+//Create a person
+// create person object with required methodss
 function Solution39(){
 	var Person = function(firstAndLast) {
 	    var first = firstAndLast.split(" ")[0], last = firstAndLast.split(" ")[1];
@@ -795,4 +796,15 @@ function Solution39(){
 
 	var bob = new Person('Bob Ross');
 	bob.getFullName();
+}
+
+//Map the debries
+function Solution40(){
+	function orbitalPeriod(arr) {
+	  var GM = 398600.4418;
+	  var earthRadius = 6367.4447;
+	  return arr;
+	}
+
+	orbitalPeriod([{name : "sputkin", avgAlt : 35873.5553}]);
 }
