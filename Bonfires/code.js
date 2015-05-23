@@ -799,11 +799,23 @@ function Solution39(){
 }
 
 //Map the debries
+//Given the altitude of object calculate its orbital period
 function Solution40(){
 	function orbitalPeriod(arr) {
-	  var GM = 398600.4418;
+	  //constants
+	  var GM = 398600.4418, n=0;
 	  var earthRadius = 6367.4447;
+	  
+	  //loop through all the objects in array
+	  for(var i =0; i <arr.length; i++){
+	  	n = arr[i].avgAlt;
+	  	//calculate the orbital period
+	  	arr[i].orbitalPeriod=2*Math.PI*Math.pow(Math.pow(earthRadius+n, 3)/GM , 0.5);
+	  	//remove avgAlt property
+	  	delete arr[i].avgAlt;
+	  }
 	  return arr;
+
 	}
 
 	orbitalPeriod([{name : "sputkin", avgAlt : 35873.5553}]);
