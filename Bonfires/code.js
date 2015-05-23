@@ -766,5 +766,33 @@ add(2, 3);
 
 //Arguments optional
 function Solution39(){
+	var Person = function(firstAndLast) {
+	    var first = firstAndLast.split(" ")[0], last = firstAndLast.split(" ")[1];
+	    var fullName = firstAndLast;
+	    
+	    return{
+	    	getFullName: function(){
+	    		return first+" "+last;
+	    	},
+	    	setFullName:function(name){
+	    		first = name.split(" ")[0];
+	    		last = name.split(" ")[1];
+	    	},
+            setFirstName: function(name){
+	    		first = name;
+	    	},
+	    	setLastName: function(name){
+	    		last = name;
+	    	},
+	    	getFirstName: function(){
+	    		return first;
+	    	},
+	    	getLastName: function(){
+	    		return last;
+	    	}
+	    }
+	};
 
+	var bob = new Person('Bob Ross');
+	bob.getFullName();
 }
