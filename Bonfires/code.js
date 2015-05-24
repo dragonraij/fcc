@@ -824,5 +824,26 @@ function Solution40(){
 //Validate US phone numbers
 //Given various phone numbers, test to see which are valid phone numbers, return true or false
 function Solution41(){
+	function telephoneCheck(str) {
+	// Good luck!
+	var phoneNumber = str.match(/\d/g); //extract number from string
+	
+	//check whether the string starts with - or is enclosed in brackets
+	if(str.match(^-||^\(.+\)$){
+		return false;
+	}
+	//USA phone numbers should have 10 or 11 including the country code
+	if (phoneNumber.length==10||(phoneNumber.length==11 && phoneNumber[0]==1)){
+		return true;
+	} 
+	//if does not meet requirements return false
+	else {
+		return false;
+	}
 
+	}
+
+
+
+telephoneCheck("555-555-5555");
 }
