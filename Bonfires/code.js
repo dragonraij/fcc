@@ -820,3 +820,9 @@ function Solution40(){
 
 	orbitalPeriod([{name : "sputkin", avgAlt : 35873.5553}]);
 }
+
+//Validate US phone numbers
+//Given various phone numbers, test to see which are valid phone numbers, return true or false
+function Solution41(){
+
+}
