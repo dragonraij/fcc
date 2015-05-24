@@ -847,3 +847,9 @@ function Solution41(){
 
 telephoneCheck("555-555-5555");
 }
+
+//Validate US phone numbers
+//Given various phone numbers, test to see which are valid phone numbers, return true or false
+function Solution42(){
+	
+}
