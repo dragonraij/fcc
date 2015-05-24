@@ -829,10 +829,10 @@ function Solution41(){
 	var phoneNumber = str.match(/\d/g); //extract number from string
 	
 	//check whether the string starts with - or is enclosed in brackets
-	if(str.match(^-||^\(.+\)$){
-		return false;
-	}
-	//USA phone numbers should have 10 or 11 including the country code
+	// if(str.match(^-)||str.match(^\(.+\)$)){
+	// 	return false;
+	// }
+	// //USA phone numbers should have 10 or 11 including the country code
 	if (phoneNumber.length==10||(phoneNumber.length==11 && phoneNumber[0]==1)){
 		return true;
 	} 
@@ -851,5 +851,28 @@ telephoneCheck("555-555-5555");
 //Validate US phone numbers
 //Given various phone numbers, test to see which are valid phone numbers, return true or false
 function Solution42(){
-	
+	function sym(args) {
+	var InitArray = arguments[0];
+	var currentArray = [];
+
+	for(var i = 1; i <arguments.length; i++){
+		currentArray=arguments[i];
+		currentArray.forEach(findUnique);
+	}	
+		console.log(InitArray);
+		return InitArray;
+
+		function findUnique(element, index, array){
+			if(InitArray.indexOf(element)>=0){
+				console.log("Element found :"+element);
+				InitArray.splice(InitArray.indexOf(element),1);
+			}else{
+				InitArray.push(element);
+				console.log("Element not found :"+element);
+			}
+			
+		}
+	}
+
+sym([1, 2, 3], [5, 2, 1, 4]);
 }
