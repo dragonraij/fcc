@@ -439,8 +439,8 @@ unite([1, 2, 3], [5, 2, 1, 4], [2, 1]);
 function Solution27(){
 function convert(str) {
   // &colon;&rpar;
-  str =str.replace(/&/g, "&#38" );
-  console.log(str);
+  str =str.replace(/&/g, '&amp;' ).replace(/</g, '&lt;' ).replace(/>/g, '&gt;' ).replace(/'/g, '&apos;' ).replace(/"/g, '&quot;' );
+  
 }
 
 convert('Dolce & Gabbana');
