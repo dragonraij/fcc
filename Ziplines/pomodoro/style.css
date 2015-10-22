@@ -4,7 +4,7 @@ body{
 
 div{
   background-color:#555;
-  height:200px;
+
 }
 
 #tomato{
@@ -12,5 +12,18 @@ div{
 		border-radius: 50%;
 	width: 200px;
 	height: 200px; 
-  float:right;
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	    border-style: solid;
+    border-color: red;
+}
+
+h3{
+	display: inline;
+
+}
+
+a{
+	color: lime;
 }
