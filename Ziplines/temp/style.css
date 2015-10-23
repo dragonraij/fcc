@@ -1,3 +1,31 @@
 body{
     background-color:#444;
 }
+
+
+.tomato{
+    
+    border-radius: 50%;
+    width: 150px;
+	height: 150px;
+	
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+	
+	animation-name: spin; 
+	animation-duration: 3s; /* 3 seconds */
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+	
+	float: none;
+   
+}
+
+#time{
+   text-align: center;
+vertical-align: middle;
+line-height: 150px; 
+    
+}
+
