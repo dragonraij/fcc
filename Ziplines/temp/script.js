@@ -42,10 +42,20 @@ function ToggleTimer(){
         timerOn=false;
         $("#tomato").removeClass("redBackground");
         $("#tomato").addClass("greenBackground");
+        $('button').prop('disabled', false);
+       
     }else {
         timerOn=true;
         $("#tomato").removeClass("greenBackground");
         $("#tomato").addClass("redBackground");
+        $('button').prop('disabled', true);
+        window.setInterval(Countdown, 1000);
     }
     console.log(timerOn);
+}
+
+function Countdown(){
+ document.getElementById("time").innerHTML = pomo--;
+  //var d = new Date();
+ // document.getElementById("time").innerHTML = d.toLocaleTimeString();
 }
