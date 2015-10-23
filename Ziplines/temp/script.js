@@ -40,8 +40,12 @@ function BreakMinus() {
 function ToggleTimer(){
     if (timerOn) {
         timerOn=false;
+        $("#tomato").removeClass("redBackground");
+        $("#tomato").addClass("greenBackground");
     }else {
         timerOn=true;
+        $("#tomato").removeClass("greenBackground");
+        $("#tomato").addClass("redBackground");
     }
     console.log(timerOn);
 }
