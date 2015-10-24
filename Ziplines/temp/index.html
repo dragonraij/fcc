@@ -4,10 +4,13 @@
   <!--  -->
  <!-- Bootstrap -->
  <link href="../boots/css/bootstrap.min.css" rel="stylesheet">
+ 
+ <!--Google Fonts -->
+ <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
  <!-- Load Custom Stylesheet -->
  <link href="style.css" rel="stylesheet">
- <h1>temp project</h1>
+ <h1 class="text-center">Pomodoro Clock</h1>
  </head>
 
  <body>
@@ -16,16 +19,22 @@
     
      <!--Input and display for the Pomodoro Duration  -->
     <div class="col-xs-12 col-md-6">
-     <button class="btn btn-success btn-sm center-block" onclick="PomoPlus()">+</button>     
-     <h3 class="text-center" id="Pomotime">25</h3>
-     <button class="btn btn-success btn-sm center-block" onclick="PomoMinus()">-</button> 
+     <div class="col-center-block">
+     <h2>Session :</h2>
+     <button class="btn center-block" onclick="PomoMinus()"> -</button>    
+     <h2 class="text-center" id="Pomotime">25</h2>
+     <button class="btn center-block" onclick="PomoPlus()">+</button>
+     </div>
     </div>
     
       <!-- Input and display duration for the break duration -->
     <div class="col-xs-12 col-md-6">
-       <button class="btn btn-success btn-sm center-block" onclick="BreakPlus()">+</button>     
-       <h3 class="text-center" id="break">5</h3>
-       <button class="btn btn-success btn-sm center-block" onclick="BreakMinus()">-</button> 
+      <div class="col-center-block">
+      <h2>Break :</h2>
+       <button class="btn center-block" onclick="BreakMinus()"> -</button>     
+       <h2 class="text-center" id="break">5</h2>
+       <button class="btn center-block" onclick="BreakPlus()">+</button>
+      </div>
     </div>
     
     
@@ -33,7 +42,8 @@
        
          <!-- Defines circle which displays timer and is also toggle button -->
        <div id ="tomato" class="center-block greenBackground" onclick="ToggleTimer()">
-        <h3 id="time">25:00</h3> 
+        <h3 id="title" class="text">Session</h3>
+        <h3 id="time" class="text">25:00</h3> 
        </div>
     </div>
     
