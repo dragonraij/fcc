@@ -1,61 +1,91 @@
-var pomo=25;
-var timerOn=false;
+
+// variables declared
+
+var timerOn=false; //indictes whether the timer is active
+var counter; // variable for setinterval and clearinterval
+
+//for user selected durations
+var pomoTime=25;
+var breakTime = 5;
+//variables used to display current countdown time stored as milliseconds for
+//the date function
+var pomomSeconds = 0;
+var breakmSeconds =0;
+
+//Variables used to format the current time and extract minutes and seconds
+var date = new Date();
+var mm=0, ss=0;
 
 
+//These four functions increment and decrement the pomodoro and
+// the break duration
 function PomoPlus() {
-    pomo++;
-    document.getElementById("Pomotime").innerHTML = pomo;
-    document.getElementById("time").innerHTML = pomo;
+    pomoTime++;
+    document.getElementById("Pomotime").innerHTML = pomoTime;
+    document.getElementById("time").innerHTML = pomoTime;
 }
 
 function PomoMinus() {
-    pomo--;
-    document.getElementById("Pomotime").innerHTML = pomo;
-    document.getElementById("time").innerHTML = pomo;
-     if (timerOn) {
-        timerOn=false;
-    }else {
-        timerOn=true;
-    }
-    console.log(timerOn);
+    pomoTime--;
+    document.getElementById("Pomotime").innerHTML = pomoTime;
+    document.getElementById("time").innerHTML = pomoTime;
     
 }
 
 function BreakPlus() {
-    pomo++;
-    document.getElementById("break").innerHTML = pomo;
-     if (timerOn) {
-        timerOn=false;
-    }else {
-        timerOn=true;
-    }
-    console.log(timerOn);
+    breakTime++;
+    document.getElementById("break").innerHTML = breakTime;
+    
 }
 
 function BreakMinus() {
-    pomo--;
-    document.getElementById("break").innerHTML = pomo;
+    breakTime--;
+    document.getElementById("break").innerHTML = breakTime;
 }
 
+
+//Toggle timer function toggles between active and inactive states
 function ToggleTimer(){
     if (timerOn) {
         timerOn=false;
         $("#tomato").removeClass("redBackground");
         $("#tomato").addClass("greenBackground");
         $('button').prop('disabled', false);
+        clearInterval(counter);
        
     }else {
         timerOn=true;
         $("#tomato").removeClass("greenBackground");
         $("#tomato").addClass("redBackground");
         $('button').prop('disabled', true);
-        window.setInterval(Countdown, 1000);
+        pomomSeconds=pomoTime*60*1000; //convert time input to ms
+        breakmSeconds = breakTime *60*1000;
+        counter = window.setInterval(Countdown, 100);
     }
     console.log(timerOn);
 }
 
+//updates the countdown timer, is called every second using setInterval
 function Countdown(){
- document.getElementById("time").innerHTML = pomo--;
-  //var d = new Date();
- // document.getElementById("time").innerHTML = d.toLocaleTimeString();
+    
+    if (pomomSeconds>=0) {
+        DisplayTime(pomomSeconds)
+        pomomSeconds-=1000; //decrease time by 1000ms = 1 second
+    }
+    
+   // document.getElementById("time").innerHTML = --pomoTime;
+    //var d = new Date();
+    // document.getElementById("time").innerHTML = d.toLocaleTimeString();
+}
+
+function DisplayTime(seconds){
+    
+    date = new Date(seconds);
+    mm = date.getUTCMinutes();
+    ss = date.getSeconds();
+    if (mm < 10) {mm = "0"+mm;}
+    if (ss < 10) {ss = "0"+ss;}
+    // This formats time to MM:SS
+    document.getElementById("time").innerHTML = mm+":"+ss;
+    
 }
