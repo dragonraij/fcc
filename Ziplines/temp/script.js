@@ -5,8 +5,8 @@ var timerOn=false; //indictes whether the timer is active
 var counter; // variable for setinterval and clearinterval
 
 //for user selected durations
-var pomoTime=25;
-var breakTime = 5;
+var pomoTime=1;
+var breakTime = 1;
 //variables used to display current countdown time stored as milliseconds for
 //the date function
 var pomomSeconds = 0;
@@ -47,23 +47,35 @@ function BreakMinus() {
 //Toggle timer function toggles between active and inactive states
 function ToggleTimer(){
     if (timerOn) {
-        timerOn=false;
-        $("#tomato").removeClass("redBackground");
-        $("#tomato").addClass("greenBackground");
-        $('button').prop('disabled', false);
-        clearInterval(counter);
+        TurnOff();
        
     }else {
-        timerOn=true;
+       TurnOn();
+    }
+   
+}
+
+
+function TurnOn(){
+     timerOn=true;
         $("#tomato").removeClass("greenBackground");
         $("#tomato").addClass("redBackground");
         $('button').prop('disabled', true);
         pomomSeconds=pomoTime*60*1000; //convert time input to ms
         breakmSeconds = breakTime *60*1000;
         counter = window.setInterval(Countdown, 100);
-    }
-    console.log(timerOn);
 }
+
+
+function TurnOff(){
+    timerOn=false;
+        $("#tomato").removeClass("redBackground");
+        $("#tomato").addClass("greenBackground");
+        $('button').prop('disabled', false);
+        clearInterval(counter);
+}
+
+
 
 //updates the countdown timer, is called every second using setInterval
 function Countdown(){
@@ -71,6 +83,14 @@ function Countdown(){
     if (pomomSeconds>=0) {
         DisplayTime(pomomSeconds)
         pomomSeconds-=1000; //decrease time by 1000ms = 1 second
+    } 
+    else if (breakmSeconds>=0) {
+        DisplayTime(breakmSeconds)
+        breakmSeconds-=1000; //decrease time by 1000ms = 1 second
+    
+    //When timer ends stop counting and toggle switch
+    }else {
+        TurnOff();
     }
     
    // document.getElementById("time").innerHTML = --pomoTime;
