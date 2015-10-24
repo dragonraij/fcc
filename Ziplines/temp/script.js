@@ -3,6 +3,7 @@
 
 var timerOn=false; //indictes whether the timer is active
 var counter; // variable for setinterval and clearinterval
+var myElement =0;
 
 //for user selected durations
 var pomoTime=1;
@@ -81,11 +82,11 @@ function TurnOff(){
 function Countdown(){
     
     if (pomomSeconds>=0) {
-        DisplayTime(pomomSeconds)
+        DisplayTime(pomomSeconds, pomomSeconds)
         pomomSeconds-=1000; //decrease time by 1000ms = 1 second
     } 
     else if (breakmSeconds>=0) {
-        DisplayTime(breakmSeconds)
+        DisplayTime(breakmSeconds, pomomSeconds)
         breakmSeconds-=1000; //decrease time by 1000ms = 1 second
     
     //When timer ends stop counting and toggle switch
@@ -98,7 +99,7 @@ function Countdown(){
     // document.getElementById("time").innerHTML = d.toLocaleTimeString();
 }
 
-function DisplayTime(seconds){
+function DisplayTime(seconds, pomo){
     
     date = new Date(seconds);
     mm = date.getUTCMinutes();
@@ -107,5 +108,14 @@ function DisplayTime(seconds){
     if (ss < 10) {ss = "0"+ss;}
     // This formats time to MM:SS
     document.getElementById("time").innerHTML = mm+":"+ss;
-    
+    myElement = document.querySelector("#tomato");
+    if (pomo>0) {
+        document.getElementById("title").innerHTML="Session";
+        myElement.style.background= "linear-gradient(to top, #F00 "+(pomoTime-(seconds/1000/60))/pomoTime*100+"%, #242 , #242)";
+        
+    }else{
+            document.getElementById("title").innerHTML="Break !!";
+            myElement.style.background= "linear-gradient(to top, #0F0 "+(breakTime-(seconds/1000/60))/breakTime*100+"%, #242 , #242)";
+
+    }
 }
