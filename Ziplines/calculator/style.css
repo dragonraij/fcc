@@ -69,9 +69,32 @@ body{
     position: absolute;
     bottom: 5px;
     left: 148px;
+    
+}
+
+
+.functionbtn{
     background: linear-gradient(0deg, #FEA4C3, #FE44C3, #FEA4C3);
     border:#FE11C3 2px solid;   
 }
+
+.equalbtn{
+    background: linear-gradient(0deg, #2D0096, #3200A8, #2D0096);
+    border:#2D0096 2px solid;   
+}
+
+.numberbtn{
+     border: solid #52AA8E 2px;
+    background: linear-gradient(0deg, #52DE8E, #52BB8E, #52DE8E);
+}
+
+
+.clearbtn{
+    border: solid #D6E87F 2px;
+    background: linear-gradient(0deg, #ECFF8B, #D6E87F, #ECFF8B);
+    color:white;
+}
+
 
 .buttons{
     height:40px;
@@ -79,21 +102,35 @@ body{
     margin:3px 7px;
     display:inline-block;
     border-radius: 30% / 30%;
-    border: solid #52AA8E 2px;
-    background: linear-gradient(0deg, #52DE8E, #52BB8E, #52DE8E);
+   
     box-shadow: 3px 3px 5px #888888;
-    color:#2D0096;
+    color:white;
     text-align:center;
     vertical-align:middle;
     line-height:40px;
     font-size:20px;
+    font-family:'Roboto';
 }
+
+.buttons:hover{
+    text-shadow: 0 0 1em yellow,0 0 1em yellow,0 0 1em yellow;
+
+}
+
+
+.buttons:active{
+    -webkit-box-shadow: 0px 2px 0px #84261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    box-shadow: 0px 2px 0px #84261a;
+   
+}
+
 
 h4{
     font-family: 'Pacifico', cursive;
     text-align:right;
     margin-right:30px;
-    color:#D8D7D2;
+    color:#2D0096;
 }
 
 
@@ -105,5 +142,12 @@ h4{
 }
 
 #displaytext{
-    color:blue;
+    color:#696;
+    font-family:VT323;
+    font-size:50px;
+    vertical-align:middle;
+    line-height:20px;
+    text-align:right;
+    margin-right:10px;
+    
 }
