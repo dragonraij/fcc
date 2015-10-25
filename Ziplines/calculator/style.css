@@ -14,7 +14,7 @@ body{
 }
 
 #title{
-    height:40px;
+    height:30px;
 }
 
 #display{
@@ -23,15 +23,19 @@ body{
     -webkit-box-shadow: inset 0 0 20px #D8D7D2;
     box-shadow:         inset 0 0 20px #D8D7D2;
     border: #D8D7D2 2px solid;
-    width:250px;
+    width:260px;
     margin: 10px auto;
     background-color:#B2E0B2;
+    border-radius:5%;
 }
 
 #keypad{
-    height:260px;
+    height:242px;
     padding:3px;
     position:relative;
+        -moz-box-shadow:    inset 0 0 20px #D8D7D2;
+    -webkit-box-shadow: inset 0 0 20px #D8D7D2;
+    box-shadow:         inset 0 0 5px #D8D7D2;
 }
 
 
@@ -84,9 +88,22 @@ body{
     line-height:40px;
     font-size:20px;
 }
-div{
-    
 
-    border: solid blue 1px;
+h4{
+    font-family: 'Pacifico', cursive;
+    text-align:right;
+    margin-right:30px;
+    color:#D8D7D2;
 }
 
+
+#footer{ 
+    font-family: sans-serif;
+    text-align:center;
+  
+    color:#D8D7D2;
+}
+
+#displaytext{
+    color:blue;
+}
