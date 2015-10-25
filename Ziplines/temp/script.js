@@ -6,8 +6,8 @@ var counter; // variable for setinterval and clearinterval
 var myElement =0;
 
 //for user selected durations
-var pomoTime=1;
-var breakTime = 1;
+var pomoTime=25;
+var breakTime = 5;
 //variables used to display current countdown time stored as milliseconds for
 //the date function
 var pomomSeconds = 0;
@@ -18,30 +18,47 @@ var date = new Date();
 var mm=0, ss=0;
 
 
+
+
+
 //These four functions increment and decrement the pomodoro and
 // the break duration
 function PomoPlus() {
-    pomoTime++;
-    document.getElementById("Pomotime").innerHTML = pomoTime;
-    document.getElementById("time").innerHTML = pomoTime;
+    if (pomoTime<1000) {
+        pomoTime++;
+        document.getElementById("title").innerHTML="Session";
+        document.getElementById("Pomotime").innerHTML = pomoTime;
+        document.getElementById("time").innerHTML = pomoTime+":00";        
+    }
+
 }
 
 function PomoMinus() {
-    pomoTime--;
-    document.getElementById("Pomotime").innerHTML = pomoTime;
-    document.getElementById("time").innerHTML = pomoTime;
+    if (pomoTime>0) {
+        pomoTime--;
+        document.getElementById("title").innerHTML="Session";
+        document.getElementById("Pomotime").innerHTML = pomoTime;
+        document.getElementById("time").innerHTML = pomoTime+":00";  
+        
+    }
     
 }
 
 function BreakPlus() {
-    breakTime++;
-    document.getElementById("break").innerHTML = breakTime;
+    if (breakTime<100) {
+        breakTime++;
+        document.getElementById("break").innerHTML = breakTime;
+            
+    }
     
 }
 
 function BreakMinus() {
-    breakTime--;
-    document.getElementById("break").innerHTML = breakTime;
+    if (breakTime>0) {
+        breakTime--;
+        document.getElementById("break").innerHTML = breakTime;
+        
+    }
 }
 
 
@@ -64,7 +81,7 @@ function TurnOn(){
         $('button').prop('disabled', true);
         pomomSeconds=pomoTime*60*1000; //convert time input to ms
         breakmSeconds = breakTime *60*1000;
-        counter = window.setInterval(Countdown, 100);
+        counter = window.setInterval(Countdown, 1000);
 }
 
 
