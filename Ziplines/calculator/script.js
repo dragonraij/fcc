@@ -4,7 +4,9 @@ var operator = null;
 
 function getNumber(a){
     current=a;
-    console.log(operator);
+    console.log(current);
+    document.getElementById("displaytext").innerHTML=current;
+    
 }
 
 function getOperator(a){

@@ -11,11 +11,13 @@
          <!--Google Fonts -->
          <link href='https://fonts.googleapis.com/css?family=Pacifico|VT323|Roboto' rel='stylesheet' type='text/css'>
          <link href='https://fonts.googleapis.com/css?family=VT323|Roboto' rel='stylesheet' type='text/css'>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Load Custom Stylesheet -->
         <link href="style.css" rel="stylesheet">
         
         <title>Calculator - Raj Prasad</title>
- 
+     
     </head>
     <body>
         <div id="calculator">
@@ -28,16 +30,16 @@
             <div id=keypad>
                 <div class="buttons clearbtn" id="AC">AC</div>
                 <div class="buttons clearbtn" id="CE">CE</div>
-                <div class="buttons functionbtn" id="percent">%</div>
-                <div class="buttons functionbtn" id="divide">/</div>
+                <div class="buttons functionbtn" id="percent" onclick="getOperator('percent')">%</div>
+                <div class="buttons functionbtn" id="divide" onclick="getOperator('divide')">/</div>
                 <div class="buttons numberbtn" id="seven" onclick="getNumber(7)">7</div>
                 <div class="buttons numberbtn" id="eight" onclick="getNumber(8)">8</div>
                 <div class="buttons numberbtn" id="nine"  onclick="getNumber(9)">9</div>
-                <div class="buttons functionbtn" id="multiply" >x</div>
+                <div class="buttons functionbtn" id="multiply" onclick="getOperator('multiply')">x</div>
                 <div class="buttons numberbtn" id="four" onclick="getNumber(4)">4</div>
                 <div class="buttons numberbtn" id="five" onclick="getNumber(5)">5</div>
                 <div class="buttons numberbtn" id="six" onclick="getNumber(6)">6</div>
-                <div class="buttons functionbtn" id="minus">-</div>
+                <div class="buttons functionbtn" id="minus" onclick="getOperator('minus')">-</div>
                 <div class="buttons numberbtn" id="one" onclick="getNumber(1)">1</div>
                 <div class="buttons numberbtn" id="two" onclick="getNumber(2)">2</div>
                 <div class="buttons numberbtn" id="three" onclick="getNumber(3)">3</div>
