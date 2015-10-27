@@ -23,28 +23,28 @@
                 <h4>EzyCal</h4>
             </div>
             <div id="display">
-                <h2 id="displaytext">1234567890</h2>
+                <h2 id="displaytext"></h2>
             </div>
             <div id=keypad>
                 <div class="buttons clearbtn" id="AC">AC</div>
                 <div class="buttons clearbtn" id="CE">CE</div>
                 <div class="buttons functionbtn" id="percent">%</div>
                 <div class="buttons functionbtn" id="divide">/</div>
-                <div class="buttons numberbtn" id="seven">7</div>
-                <div class="buttons numberbtn" id="eight">8</div>
-                <div class="buttons numberbtn" id="nine">9</div>
-                <div class="buttons functionbtn" id="">x</div>
-                <div class="buttons numberbtn" id="four">4</div>
-                <div class="buttons numberbtn" id="five">5</div>
-                <div class="buttons numberbtn" id="six">6</div>
-                <div class="buttons functionbtn" id="">-</div>
-                <div class="buttons numberbtn" id="one">1</div>
-                <div class="buttons numberbtn" id="two">2</div>
-                <div class="buttons numberbtn" id="three">3</div>
-                <div class="buttons functionbtn" id="plus">+</div>
-                <div class="buttons numberbtn" id="zero">0</div>
+                <div class="buttons numberbtn" id="seven" onclick="getNumber(7)">7</div>
+                <div class="buttons numberbtn" id="eight" onclick="getNumber(8)">8</div>
+                <div class="buttons numberbtn" id="nine"  onclick="getNumber(9)">9</div>
+                <div class="buttons functionbtn" id="multiply" >x</div>
+                <div class="buttons numberbtn" id="four" onclick="getNumber(4)">4</div>
+                <div class="buttons numberbtn" id="five" onclick="getNumber(5)">5</div>
+                <div class="buttons numberbtn" id="six" onclick="getNumber(6)">6</div>
+                <div class="buttons functionbtn" id="minus">-</div>
+                <div class="buttons numberbtn" id="one" onclick="getNumber(1)">1</div>
+                <div class="buttons numberbtn" id="two" onclick="getNumber(2)">2</div>
+                <div class="buttons numberbtn" id="three" onclick="getNumber(3)">3</div>
+                <div class="buttons functionbtn" id="plus" onclick="getOperator('plus')">+</div>
+                <div class="buttons numberbtn" id="zero" onclick="getNumber(0)">0</div>
                 <div class="buttons numberbtn" id="dot">.</div>
-                <div class="buttons equalbtn" id="equal">=</div>
+                <div class="buttons equalbtn" id="equal" onclick="getResult()">=</div>
                 
                 
             </div>
