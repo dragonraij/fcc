@@ -3,7 +3,7 @@ var current =0;
 var operator = null;
 
 function getNumber(a){
-    current=(current*10)+a;
+    current=a;
     console.log(current);
     document.getElementById("displaytext").innerHTML=current;
     
@@ -12,15 +12,12 @@ function getNumber(a){
 function getOperator(a){
     operator=a;
     previous=current;
-    current=0;
-    console.log(operator);
 }
 
 function getResult(){
     switch (operator) {
         case 'plus':
             previous+=current;
-            document.getElementById("displaytext").innerHTML=previous;
             console.log(previous);   
             break;
         case 'minus':
@@ -45,6 +42,17 @@ function getResult(){
             break;        
         
         default:
-            // code
+            // do nothing
     }
+}
+
+function clearError() {
+    current=0;
+    document.getElementById("displaytext").innerHTML=current;
+}
+
+function allClear(){
+    current =0;
+    previous=0;
+    document.getElementById("displaytext").innerHTML=current;
 }
