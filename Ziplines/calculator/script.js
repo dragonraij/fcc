@@ -1,6 +1,6 @@
 var previous =0;
 var current =0;
-var operator = null;
+var operator = "equals";
 
 function getNumber(a){
     current=a;
@@ -10,15 +10,35 @@ function getNumber(a){
 }
 
 function getOperator(a){
+    //if no numbers have been input, can change change operator sign
+    //allows change more than one time
+    if (current==0) {
+        operator=a;
+    }
+    
+    //if number has been entered checks what was previous operation if it was
+    //equality no need to calculate, assign current input to current
+    //otherwise calculate result of current and previous input and display
+    else{
+    if (operator=="equals") {
+        previous=current;
+    }else{
+        getResult();
+            
+    }
+    
+    }
+    current=0;
     operator=a;
-    previous=current;
+
 }
 
 function getResult(){
     switch (operator) {
         case 'plus':
             previous+=current;
-            console.log(previous);   
+            document.getElementById("displaytext").innerHTML=previous;
+            
             break;
         case 'minus':
             previous-=current;
@@ -41,9 +61,12 @@ function getResult(){
             console.log(previous);   
             break;        
         
-        default:
-            // do nothing
+        case 'equals':
+            previous=current;
     }
+    document.getElementById("displaytext").innerHTML=previous;
+    current=0;
+    operator="equals";
 }
 
 function clearError() {
