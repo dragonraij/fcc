@@ -5,7 +5,6 @@ var operator = "equals";
 function getNumber(a){
     //to allow multi digit numbers to be entered by user
     current=(current*10)+a;
-    console.log(current);
     document.getElementById("displaytext").innerHTML=current;
     
 }
@@ -38,28 +37,21 @@ function getResult(){
     switch (operator) {
         case 'plus':
             previous+=current;
-            document.getElementById("displaytext").innerHTML=previous;
-            
             break;
         case 'minus':
             previous-=current;
-            console.log(previous);   
             break;
         case 'divide':
             previous=previous/current;
-            console.log(previous);   
             break;
         case 'multiply':
             previous=previous*current;
-            console.log(previous);   
             break;
         case 'divide':
             previous=previous/current;
-            console.log(previous);   
             break;
         case 'percent':
             previous=previous/current*100;
-            console.log(previous);   
             break;        
         
         case 'equals':
