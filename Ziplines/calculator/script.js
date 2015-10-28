@@ -57,6 +57,7 @@ function getResult(){
         case 'equals':
             previous=current;
     }
+    previous=previous.toFixed(5);
     document.getElementById("displaytext").innerHTML=previous;
     current=0;
     operator="equals";
