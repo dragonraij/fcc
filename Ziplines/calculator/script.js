@@ -3,7 +3,8 @@ var current =0;
 var operator = "equals";
 
 function getNumber(a){
-    current=a;
+    //to allow multi digit numbers to be entered by user
+    current=(current*10)+a;
     console.log(current);
     document.getElementById("displaytext").innerHTML=current;
     
