@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <!-- 25/10/15 Rajeshwar Prasad
+        Calculator app using javascript HTML and CSS. Allows user to perform basic math operations
+        freecodecamp basic front end development project
+        white : FFFDF7 pink:FEA4C3 yellow:ECFF8B green:52DE8E blue:2D0096
+        -->
+ 
+        <!-- Bootstrap -->
+        <link href="../boots/css/bootstrap.min.css" rel="stylesheet">
+         <!--Google Fonts -->
+         <link href='https://fonts.googleapis.com/css?family=Pacifico|VT323|Roboto' rel='stylesheet' type='text/css'>
+         <link href='https://fonts.googleapis.com/css?family=VT323|Roboto' rel='stylesheet' type='text/css'>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Load Custom Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+        
+        <title>Calculator - Raj Prasad</title>
+     
+    </head>
+    <body>
+        <div id="calculator">
+            <div id="title">
+                <h4>EzyCal</h4>
+            </div>
+            <div id="display">
+                <h2 id="displaytext"></h2>
+            </div>
+            <div id=keypad>
+                <div class="buttons clearbtn" id="AC" onclick="allClear()">AC</div>
+                <div class="buttons clearbtn" id="CE" onclick="clearError()">CE</div>
+                <div class="buttons functionbtn" id="percent" onclick="getOperator('percent')">%</div>
+                <div class="buttons functionbtn" id="divide" onclick="getOperator('divide')">/</div>
+                <div class="buttons numberbtn" id="seven" onclick="getNumber(7)">7</div>
+                <div class="buttons numberbtn" id="eight" onclick="getNumber(8)">8</div>
+                <div class="buttons numberbtn" id="nine"  onclick="getNumber(9)">9</div>
+                <div class="buttons functionbtn" id="multiply" onclick="getOperator('multiply')">x</div>
+                <div class="buttons numberbtn" id="four" onclick="getNumber(4)">4</div>
+                <div class="buttons numberbtn" id="five" onclick="getNumber(5)">5</div>
+                <div class="buttons numberbtn" id="six" onclick="getNumber(6)">6</div>
+                <div class="buttons functionbtn" id="minus" onclick="getOperator('minus')">-</div>
+                <div class="buttons numberbtn" id="one" onclick="getNumber(1)">1</div>
+                <div class="buttons numberbtn" id="two" onclick="getNumber(2)">2</div>
+                <div class="buttons numberbtn" id="three" onclick="getNumber(3)">3</div>
+                <div class="buttons functionbtn" id="plus" onclick="getOperator('plus')">+</div>
+                <div class="buttons numberbtn" id="zero" onclick="getNumber(0)">0</div>
+                <div class="buttons numberbtn" id="dot">.</div>
+                <div class="buttons equalbtn" id="equal" onclick="getResult()">=</div>
+                
+                
+            </div>
+            <p id="footer">Designed by Raj : Made in China</p>
+        </div>
+        
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

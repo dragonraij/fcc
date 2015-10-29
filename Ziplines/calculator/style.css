@@ -1,0 +1,153 @@
+body{
+    background:linear-gradient(to bottom right, #CCFFFF , #CCFFCC);
+}
+
+#calculator{
+    height:400px;
+    width:300px;
+    background:#FFFDF7;
+    margin: 80px auto;
+    box-shadow: 10px 10px 25px #888888;
+    border: #D8D7D2 2px solid;
+    border-radius:5%;
+    
+}
+
+#title{
+    height:30px;
+}
+
+#display{
+    height:70px;  
+    -moz-box-shadow:    inset 0 0 20px #D8D7D2;
+    -webkit-box-shadow: inset 0 0 20px #D8D7D2;
+    box-shadow:         inset 0 0 20px #D8D7D2;
+    border: #D8D7D2 2px solid;
+    width:260px;
+    margin: 10px auto;
+    background-color:#B2E0B2;
+    border-radius:5%;
+}
+
+#keypad{
+    height:242px;
+    padding:3px;
+    position:relative;
+        -moz-box-shadow:    inset 0 0 20px #D8D7D2;
+    -webkit-box-shadow: inset 0 0 20px #D8D7D2;
+    box-shadow:         inset 0 0 5px #D8D7D2;
+}
+
+
+#plus{
+    height:90px;
+    position: absolute;
+    bottom: 5px;
+    right:6px;
+    background: linear-gradient(0deg, #FEA4C3, #FE44C3, #FEA4C3);
+    border:#FE11C3 2px solid;
+    line-height:85px;
+    
+}
+
+
+#dot{
+    position: absolute;
+    bottom: 5px;
+    left: 75px;
+}
+
+
+#zero{
+    position: absolute;
+    bottom: 5px;
+    left: 4px;
+}
+
+
+#equal{
+    position: absolute;
+    bottom: 5px;
+    left: 148px;
+    
+}
+
+
+.functionbtn{
+    background: linear-gradient(0deg, #FEA4C3, #FE44C3, #FEA4C3);
+    border:#FE11C3 2px solid;   
+}
+
+.equalbtn{
+    background: linear-gradient(0deg, #2D0096, #3200A8, #2D0096);
+    border:#2D0096 2px solid;   
+}
+
+.numberbtn{
+     border: solid #52AA8E 2px;
+    background: linear-gradient(0deg, #52DE8E, #52BB8E, #52DE8E);
+}
+
+
+.clearbtn{
+    border: solid #D6E87F 2px;
+    background: linear-gradient(0deg, #ECFF8B, #D6E87F, #ECFF8B);
+    color:white;
+}
+
+
+.buttons{
+    height:40px;
+    width:54px;
+    margin:3px 7px;
+    display:inline-block;
+    border-radius: 30% / 30%;
+   
+    box-shadow: 3px 3px 5px #888888;
+    color:white;
+    text-align:center;
+    vertical-align:middle;
+    line-height:40px;
+    font-size:20px;
+    font-family:'Roboto';
+}
+
+.buttons:hover{
+    text-shadow: 0 0 1em yellow,0 0 1em yellow,0 0 1em yellow;
+
+}
+
+
+.buttons:active{
+    -webkit-box-shadow: 0px 2px 0px #84261a;
+    -moz-box-shadow: 0px 2px 0px #84261a;
+    box-shadow: 0px 2px 0px #84261a;
+   
+}
+
+
+h4{
+    font-family: 'Pacifico', cursive;
+    text-align:right;
+    margin-right:30px;
+    color:#2D0096;
+}
+
+
+#footer{ 
+    font-family: sans-serif;
+    text-align:center;
+  
+    color:#D8D7D2;
+}
+
+#displaytext{
+    color:#696;
+    font-family:VT323;
+    font-size:50px;
+    vertical-align:middle;
+    line-height:20px;
+    text-align:right;
+    margin-right:10px;
+    
+}
