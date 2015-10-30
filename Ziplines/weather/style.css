@@ -1,0 +1,38 @@
+#weatherInfo{
+    background-color:lightgray;
+    height:150px;
+    width:250px;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+#city{
+    height:50px;
+    border-radius:5px;
+    background-color:white;
+    
+}
+
+#weather{
+background-color:white;
+border-radius:10px;
+
+}
+
+#winds{
+    background-color:white;
+    border-radius:10px;
+
+}
+
+
+p{
+    text-align:center;
+    vertical-align:middle;
+    font-family: sans-serif;
+    line-height:45px;
+    
+}
+div{
+    margin: 3px;
+}
