@@ -1,6 +1,6 @@
 html{
     background:url(sky.jpg) no-repeat center center fixed;
-    
+    background-size:cover;
     
 }
 
@@ -29,6 +29,7 @@ html{
 background-color:white;
 border-radius:10px;
 opacity:0.6;
+margin:5px;
 }
 
 
@@ -51,4 +52,10 @@ p{
     
     
     
+}
+
+
+button{
+    width:50%;
+    opacity:0.9;
 }
