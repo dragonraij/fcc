@@ -1,38 +1,61 @@
+html{
+    background:url(sky.jpg) no-repeat center center fixed;
+    background-size:cover;
+    
+}
+
+
 #weatherInfo{
-    background-color:lightgray;
+
     height:150px;
     width:250px;
-    margin: 0 auto;
-    vertical-align: middle;
+   
+   position:absolute;
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   
+   margin:auto;
 }
 
 #city{
     height:50px;
-    border-radius:5px;
-    background-color:white;
+  
     
 }
 
-#weather{
+#weather,#city, #winds{
 background-color:white;
 border-radius:10px;
+opacity:0.6;
+margin:5px;
+}
 
+
+#weather{
+   
 }
 
 #winds{
-    background-color:white;
-    border-radius:10px;
-
+   
 }
 
 
 p{
     text-align:center;
     vertical-align:middle;
-    font-family: sans-serif;
+    
+    color:#0404B4;
+    font-family: "Arial Black", Geneva, sans-serif;
     line-height:45px;
     
+    
+    
 }
-div{
-    margin: 3px;
+
+
+button{
+    width:50%;
+    opacity:0.9;
 }
