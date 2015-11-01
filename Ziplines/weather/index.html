@@ -17,14 +17,19 @@ current weather pattern
         <script type="text/javascript" src="script.js"></script>
         <!-- used to center the data in display -->
         <div id="weatherInfo">
-            <img src=""></img>
+            
             <div id="weatherDetails">
                 <div><p id="city">City Name, Country Name</p>
                 
                 </div>
-                <div><p id="weather">" "</p></div>
+                <div>
+                    <div>
+                    <img src="" id="icon"></img>
+                    <p id="weather">"temp"</p>
+                    </div>
+                </div>
                 <div><p id="winds"> </p></div>
-                <button>Tomorrow</button><button>Celcius</button>
+                <button onclick="changeTemp()">Tomorrow</button><button>Celcius</button>
             </div>
         </div>
     </body>

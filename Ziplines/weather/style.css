@@ -30,17 +30,26 @@ background-color:white;
 border-radius:10px;
 opacity:0.6;
 margin:5px;
+
 }
 
 
 #weather{
-   
+   display:inline-block;
 }
 
 #winds{
    
 }
 
+#icon{
+    height:20px;
+    width:20px;
+    vertical-align:middle;
+    display:inline-block;
+    margin-left:50px;
+    
+}
 
 p{
     text-align:center;
@@ -61,3 +70,4 @@ button{
     width:50%;
     opacity:0.9;
 }
+

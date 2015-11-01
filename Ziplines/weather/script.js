@@ -24,6 +24,8 @@ $.getJSON("http:///www.ipinfo.io/", null, function(response){
 	$.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+","+country+"&units=metric&APPID=aae4a1f36a91da5662b14523e312a089", null,function(json){
 		hi=json;
 		document.getElementById("weather").innerHTML = json.weather[0].description;	
+	    document.getElementById("icon").src="www.xyz.com/"+hi.url+".png";
+	    
 	});
 
 
