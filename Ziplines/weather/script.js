@@ -23,7 +23,8 @@ $.getJSON("http:///www.ipinfo.io/", null, function(response){
 	//get weather data
 	$.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+","+country+"&units=metric&APPID=aae4a1f36a91da5662b14523e312a089", null,function(json){
 		weather=json;
-		document.getElementById("weather").innerHTML = json.weather[0].description;	
+		document.getElementById("weather").innerHTML = json.weather[0].description;
+        document.getElementById("temp").innerHTML = json.main.temp+"&#x2103;";  //faren 2109	
 	    document.getElementById("icon").src="http://openweathermap.org/img/w/"+weather.weather[0].icon+".png";
 	    
 	});

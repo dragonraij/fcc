@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<!-- Weather application uses to find the city of the user based on the users IP.
+<!-- 
+Author: Raj Prasad /dragonraij
+Weather application uses to find the city of the user based on the users IP.
 This location is sent to the to get the details of the current weather at the
 location.
 Current weather is displayed and the background image is changed based on the
@@ -7,31 +9,26 @@ current weather pattern
 -->
 <html>
     <head>
-        <title>MyWeather</title>
+        <title>MeroWeather - Raj Pra</title>
         <link rel="stylesheet" href="style.css" type="text/css" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
     </head>
     <body>
-        <p>My Weather</p>
+        <h1>MeroWeather</h1>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
         <!-- used to center the data in display -->
         <div id="weatherInfo">
             
-            <div id="weatherDetails">
-                <div><p id="city">City Name, Country Name</p>
-                
-                </div>
-                <div>
-                    <div>
+            
                     <img src="" id="icon"></img>
-                    <p id="temp">"temp"</p>
+                    <p id="city">City Name, Country Name</p>
+                     <p id="temp">"temp"</p>
                     <p id="weather">"condition"</p>
-                    </div>
-                </div>
-                <div><p id="winds"> </p></div>
+                
+
                 <button onclick="changeTemp()">Reload</button><button>Fahrenheit</button>
-            </div>
+            
         </div>
     </body>
 </html>

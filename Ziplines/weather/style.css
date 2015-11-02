@@ -4,19 +4,23 @@ html{
     
 }
 
+html, body{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
 #weatherInfo{
+  height: 200px;
+   width:250px;
+   
 
-    height:150px;
-    width:250px;
-   
-   position:absolute;
-   top:0;
-   bottom:0;
-   left:0;
-   right:0;
-   
-   margin:auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-125px,-100px);
+
+  
 }
 
 #city{
@@ -25,7 +29,7 @@ html{
     
 }
 
-#weather,#city, #winds{
+#weather,#city, #winds, #weatherInfo{
 background-color:white;
 border-radius:10px;
 opacity:0.6;
@@ -43,10 +47,12 @@ margin:5px;
 }
 
 #icon{
-     vertical-align:middle;
-    display:inline-block;
-    margin-left:50px;
-    
+
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: auto;
+        
 }
 
 p{
@@ -55,12 +61,21 @@ p{
     
     color:#0404B4;
     font-family: "Arial Black", Geneva, sans-serif;
-    line-height:25px;
+ 
 
     margin: 0;
     
+}
+
+
+h1{
+    text-align:center;
+    vertical-align:middle;
     
-    
+    color:#0404B4;
+    font-family: "Arial Black", Geneva, sans-serif;
+
+
 }
 
 
