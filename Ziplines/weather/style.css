@@ -12,39 +12,21 @@ html, body{
 
 #weatherInfo{
   height: 200px;
-   width:250px;
-   
-
+  width:250px;
+  
   position: fixed;
   top: 50%;
   left: 50%;
   transform:translate(-125px,-100px);
 
-  
-}
-
-#city{
-    height:50px;
-  
+  background-color:white;
+  border-radius:10px;
+  opacity:0.65;
     
 }
 
-#weather,#city, #winds, #weatherInfo{
-background-color:white;
-border-radius:10px;
-opacity:0.6;
-margin:5px;
-
-}
 
 
-#weather,#temp{
-   display:inline;
-}
-
-#winds{
-   
-}
 
 #icon{
 
@@ -64,17 +46,25 @@ p{
  
 
     margin: 0;
+    padding: 0;
     
 }
 
 
 h1{
+  line-height: 100px;
+
+}
+
+
+h1,h2{
     text-align:center;
     vertical-align:middle;
     
     color:#0404B4;
     font-family: "Arial Black", Geneva, sans-serif;
-
+    margin: 0;
+    padding: 0;
 
 }
 
