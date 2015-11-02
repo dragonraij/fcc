@@ -41,8 +41,8 @@ p{
     text-align:center;
     vertical-align:middle;
     
-    color:#0404B4;
-    font-family: "Arial Black", Geneva, sans-serif;
+    color:#407F7F;
+    font-family: "Arial Rounded MT Bold", Geneva, sans-serif;
  
 
     margin: 0;
@@ -51,21 +51,21 @@ p{
 }
 
 
-h1{
-  line-height: 100px;
-
-}
-
-
 h1,h2{
     text-align:center;
     vertical-align:middle;
     
-    color:#0404B4;
+    color:#801515;
     font-family: "Arial Black", Geneva, sans-serif;
     margin: 0;
     padding: 0;
 
+}
+
+
+h1{
+  line-height: 100px;
+  color: #D4B16A;
 }
 
 
