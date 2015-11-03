@@ -44,11 +44,13 @@ function changeTemp(){
     if(degrees=="celcius"){
         temp= (temp *  9/5) + 32;
         degrees= "fahrenheit";
+        temp=+temp.toFixed(2);// round off the number 2 2dp
         document.getElementById("temp").innerHTML = temp+"&#x2109;";  //faren 2109
     }else{
         
         degrees="celcius";
         temp=(temp-32)*5/9;
+        temp=+temp.toFixed(2);// round off the number 2 2dp
         document.getElementById("temp").innerHTML = temp+"&#x2103;";  //faren 2109
     }
 }
