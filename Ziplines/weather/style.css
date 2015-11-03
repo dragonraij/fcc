@@ -56,7 +56,11 @@ h1,h2{
     vertical-align:middle;
     
     color:#801515;
-    font-family: "Arial Black", Geneva, sans-serif;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
     margin: 0;
     padding: 0;
 
@@ -66,11 +70,28 @@ h1,h2{
 h1{
   line-height: 100px;
   color: #D4B16A;
+  font-size: 65px;
 }
 
 
 button{
     width:50%;
-    opacity:0.9;
+    background-color:#44c767;
+  border-radius:28px;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:14px;
+  padding: 5px 0;
+  opacity: 1 ;
+
+  
 }
 
+button:hover{
+  background-color: #84C68C;
+}
+
+#backbtn{
+  width: 100%;
+}

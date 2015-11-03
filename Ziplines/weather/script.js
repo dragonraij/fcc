@@ -23,8 +23,9 @@ $.getJSON("http:///www.ipinfo.io/", null, function(response){
 	//get weather data
 	$.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+city+","+country+"&units=metric&APPID=aae4a1f36a91da5662b14523e312a089", null,function(json){
 		weather=json;
-		document.getElementById("weather").innerHTML = json.weather[0].description;
-        document.getElementById("temp").innerHTML = json.main.temp+"&#x2103;";  //faren 2109	
+		temp=json.main.temp;
+        document.getElementById("weather").innerHTML = json.weather[0].description;
+        document.getElementById("temp").innerHTML = temp+"&#x2103;";  //faren 2109	
 	    document.getElementById("icon").src="http://openweathermap.org/img/w/"+weather.weather[0].icon+".png";
 	    
 	});
@@ -40,15 +41,24 @@ $.getJSON("http:///www.ipinfo.io/", null, function(response){
 
 
 function changeTemp(){
-    if(degrees="celcius"){
+    if(degrees=="celcius"){
         temp= (temp *  9/5) + 32;
         degrees= "fahrenheit";
+        document.getElementById("temp").innerHTML = temp+"&#x2109;";  //faren 2109
     }else{
         
         degrees="celcius";
+        temp=(temp-32)*5/9;
+        document.getElementById("temp").innerHTML = temp+"&#x2103;";  //faren 2109
     }
 }
 
+
+
+function reload(){
+    location.reload();
+    $(document).ready();
+}
 /*$.get
 
 ("http://api.openweathermap.org/data/2.5/weather?q=Modesto&APPID=aae4a1f36a91da5662b14523e312a089", function
