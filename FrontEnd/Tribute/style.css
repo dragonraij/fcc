@@ -1,0 +1,45 @@
+
+ 
+ .item1 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+  
+  .item2 {
+    background: LightSalmon;
+    grid-area: advert;
+  }
+  
+  .item3 {
+    background: PaleTurquoise;
+    grid-area: content;
+    
+  }
+  
+  .item4 {
+    background: lightpink;
+    grid-area: footer;
+  }
+  
+  .itemOne {
+    background: PaleGreen;
+  }
+  
+  .itemTwo {
+    background: BlanchedAlmond;
+  }
+  
+  .container {
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    
+    grid-template-areas:
+      "header header"
+      "advert content"
+      "advert footer";
+  }
