@@ -12,6 +12,13 @@
     background: lightGray;
     grid-area: advert;
   }
+
+  #image{
+    margin: 0;
+  max-width: 100%;
+  display: block;
+  }
+  
   
   .item3 {
     background: WhiteSmoke;
