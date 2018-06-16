@@ -16,6 +16,8 @@
   .item3 {
     background: WhiteSmoke;
     grid-area: content;
+    display: grid;
+    grid-template-columns: 10px 20px 1fr 20px 10px;
     
   }
   
@@ -26,10 +28,22 @@
   
   .itemOne {
     background: #80d8ff;
+    grid-column: 1 / 6;
   }
   
   .itemTwo {
-    background: BlanchedAlmond;
+    background: WhiteSmoke;
+    grid-column: 2 / 5;
+  }
+  
+  .bio {
+    background: WhiteSmoke;
+    grid-column: 2 / 5;
+  }
+  
+  .bioContent {
+    background: WhiteSmoke;
+    grid-column: 3 / 4;
   }
   
   #main {
@@ -49,4 +63,8 @@
   
   #title{
       text-align: center;
+  }
+  
+  #quote{
+      font-style: italic;
   }
