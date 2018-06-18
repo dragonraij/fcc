@@ -12,8 +12,9 @@ current weather pattern
         <title>MeroWeather - Raj Pra</title>
         <link rel="stylesheet" href="style.css" type="text/css" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body id="mainBody">
         <h1>MeroWeather</h1>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="script.js"></script>
@@ -27,7 +28,8 @@ current weather pattern
                     <p id="weather">"condition"</p>
                 
 
-                <button onclick="changeTemp()">Reload</button><button>Fahrenheit</button>
+                <button onclick="reload()">Reload</button><button onclick="changeTemp()" id="tempBtn">&#x2109;/&#x2103;</button>
+                <button onclick="getRandomWeather()" id="backbtn">Change Background</button>
             
         </div>
     </body>
