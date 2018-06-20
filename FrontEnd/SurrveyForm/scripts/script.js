@@ -1,0 +1,1 @@
+$('.flagstrap').flagStrap();

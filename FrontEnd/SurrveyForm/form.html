@@ -1,17 +1,48 @@
-<form>
+
+
+<form id="survey-form">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <label for="inputCountry">Country</label>
+      <input type="text" class="form-control" id="inputCountry" placeholder="Select the Country you are in">
     </div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
+   <div class="form-row">
+      <div class="form-group col-md-4">
+      <label for="inputState">Age Range</label>
+      <select id="inputState" class="form-control">
+        <option selected>Under 20</option>
+        <option>21 - 30</option>
+        <option>31 - 40</option>
+        <option>41 - 50</option>
+        <option>51 - 60</option>
+        <option>61 - 70</option>
+        <option>Over 70</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputAddress">Currently Studying?</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    
+    <div class="form-check-inline">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="studyRadios" id="optionsRadios1" value="Fulltime" checked>
+        Yes, Fulltime
+      </label>
+    </div>
+    <div class="form-check-inline">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="studyRadios" id="optionsRadios2" value="Parttime">
+        Yes, Part Time
+      </label>
+    </div>
+    <div class="form-check-inline">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="studyRadios" id="optionsRadios3" value="No">
+        No
+      </label>
+    </div>
   </div>
   <div class="form-group">
     <label for="inputAddress2">Address 2</label>
@@ -41,6 +72,6 @@
         Check me out
       </label>
     </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+<!--  </div>-->
+<!--  <button type="submit" class="btn btn-primary">Sign in</button>-->
+<!--</form>-->
